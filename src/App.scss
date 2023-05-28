@@ -1,0 +1,124 @@
+.app {
+  text-align: center;
+  margin-top: 50px;
+
+  .inputs-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.2rem;
+
+    h2 {
+      background-color: rgb(177, 177, 177);
+      padding: 1rem;
+      width: fit-content;
+      text-align: center;
+      border-radius: 0.4rem;
+      margin: auto;
+      margin-bottom: 2rem;
+    }
+
+    .input-container {
+      margin-bottom: 10px;
+      text-align: start;
+      input[type="number"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        width: 100%;
+      }
+
+      input[type="number"]:focus {
+        outline: none;
+        border-color: #555;
+      }
+    }
+
+    .run-button {
+      all: unset;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgba(170, 90, 224, 1);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .disabled-button {
+      all: unset;
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgb(194, 194, 194);
+      border-radius: 5px;
+    }
+  }
+
+  .output-container {
+    margin: 1rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+
+    ul {
+      overflow-y: auto;
+      height: 20rem;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #888;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #555;
+        }
+
+        li {
+          padding: 10px;
+          border-bottom: 1px solid #ccc;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+    .result-container{
+      background-color: #c1c1c1;
+      border-radius: 5px;
+      padding: 1rem;
+      .result{
+        text-align: start;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  .collection-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .collection-list li {
+    margin-bottom: 5px;
+  }
+
+  .intersection-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .intersection-list li {
+    margin-bottom: 5px;
+  }
+}
