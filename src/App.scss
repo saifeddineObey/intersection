@@ -1,0 +1,49 @@
+.app {
+  text-align: center;
+  margin-top: 50px;
+
+  .initial-question {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+
+    h1 {
+      color: rgb(85, 85, 235);
+    }
+
+    p {
+      color: #c1c1c1;
+    }
+
+    .switcher {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      background-color: #c1c1c1;
+      width: fit-content;
+      label {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .collection-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .collection-list li {
+    margin-bottom: 5px;
+  }
+
+  .intersection-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .intersection-list li {
+    margin-bottom: 5px;
+  }
+}
