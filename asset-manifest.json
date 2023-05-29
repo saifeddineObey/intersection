@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "//saifeddineobey.github.io/intersection/static/css/main.afb5c446.css",
-    "main.js": "//saifeddineobey.github.io/intersection/static/js/main.595d8584.js",
+    "main.css": "//saifeddineobey.github.io/intersection/static/css/main.9c7fda90.css",
+    "main.js": "//saifeddineobey.github.io/intersection/static/js/main.96b727a9.js",
     "index.html": "//saifeddineobey.github.io/intersection/index.html",
-    "main.afb5c446.css.map": "//saifeddineobey.github.io/intersection/static/css/main.afb5c446.css.map",
-    "main.595d8584.js.map": "//saifeddineobey.github.io/intersection/static/js/main.595d8584.js.map"
+    "main.9c7fda90.css.map": "//saifeddineobey.github.io/intersection/static/css/main.9c7fda90.css.map",
+    "main.96b727a9.js.map": "//saifeddineobey.github.io/intersection/static/js/main.96b727a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.afb5c446.css",
-    "static/js/main.595d8584.js"
+    "static/css/main.9c7fda90.css",
+    "static/js/main.96b727a9.js"
   ]
 }
