@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.scss";
+import OutputContainer from "./components/output-container";
 
 const App = () => {
   const [sizeA, setSizeA] = useState("");
@@ -12,11 +13,19 @@ const App = () => {
   const [intersection, setIntersection] = useState([]);
 
   const handleSizeAChange = (event) => {
-    setSizeA(event.target.value);
+    let value = event.target.value;
+    if (value > 99) {
+      value = 99;
+    }
+    setSizeA(value);
   };
 
   const handleSizeBChange = (event) => {
-    setSizeB(event.target.value);
+    let value = event.target.value;
+    if (value > 99) {
+      value = 99;
+    }
+    setSizeB(value);
   };
 
   const handleCollectionSelection = (event) => {
@@ -85,6 +94,15 @@ const App = () => {
 
   return (
     <div className="app">
+      <div className="initial-question">
+        <h1>Initial Question Answer: </h1>
+        <p>
+          If one collection is significantly larger than the other, it is more
+          efficient to put the elements of the smaller collection into the
+          hash-set. This approach minimizes the number of lookups performed in
+          the hash-set, resulting in faster execution time.
+        </p>
+      </div>
       <div className="d-flex justify-content-center">
         <div className="inputs-container col-md-5">
           <h2>Collections-Intersection</h2>
@@ -93,7 +111,7 @@ const App = () => {
             <input
               type="number"
               id="sizeA"
-              value={sizeA}
+              value={sizeA > 99 ? 99 : sizeA}
               onChange={handleSizeAChange}
             />
           </div>
@@ -102,7 +120,7 @@ const App = () => {
             <input
               type="number"
               id="sizeB"
-              value={sizeB}
+              value={sizeB > 99 ? 99 : sizeB}
               onChange={handleSizeBChange}
             />
           </div>
@@ -114,6 +132,7 @@ const App = () => {
                 value="hashSet"
                 checked={putInHashSet}
                 onChange={handleCollectionSelection}
+                disabled={!(sizeA > 0 && sizeB > 0)}
               />
               Put Collection A into HashSet
             </label>
@@ -126,6 +145,7 @@ const App = () => {
                 value="iteration"
                 checked={!putInHashSet}
                 onChange={handleCollectionSelection}
+                disabled={!(sizeA > 0 && sizeB > 0)}
               />
               Iterate over Collection A
             </label>
@@ -142,52 +162,14 @@ const App = () => {
       </div>
       <div className="d-md-flex justify-content-center">
         <div className="d-flex justify-content-center">
-        <div className="output-container">
-          <h5>
-            <strong>Collection A:</strong>
-          </h5>
-
-          {collectionA.length > 0 ? (
-            <ul>
-              {collectionA.map((element, index) => (
-                <li key={index}>{element}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>No elements in Collection A</p>
-          )}
+          <OutputContainer title={"Collection A"} collection={collectionA} />
+          <OutputContainer title={"Collection B"} collection={collectionB} />
         </div>
-        <div className="output-container">
-          <h5>
-            <strong>Collection B:</strong>
-          </h5>
-          {collectionB.length > 0 ? (
-            <ul>
-              {collectionB.map((element, index) => (
-                <li key={index}>{element}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>No elements in Collection B</p>
-          )}
-        </div>
-        </div>
-        <div className="output-container">
-          <h5>
-
-            <strong>Intersection:</strong>
-          </h5>
-          {intersection.length > 0 ? (
-            <ul>
-              {intersection.map((element, index) => (
-                <li key={index}>{element}</li>
-              ))}
-            </ul>
-          ) : (
-            <p>No elements in Intersection</p>
-          )}
-
-          <div className="result-container">
+        <OutputContainer title={"Intersection"} collection={intersection} />
+      </div>
+      {computationTime && (
+        <div className=" d-flex justify-content-center">
+          <div className="result-container col-md-5">
             <div className="result">
               <strong>Intersection Size:</strong> {intersectionSize}
             </div>
@@ -196,7 +178,7 @@ const App = () => {
             </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

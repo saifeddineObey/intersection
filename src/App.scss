@@ -2,6 +2,21 @@
   text-align: center;
   margin-top: 50px;
 
+  .initial-question {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.2rem;
+    margin-bottom: 1rem;
+
+    h1 {
+      color: rgb(85, 85, 235);
+    }
+
+    p {
+      color: #c1c1c1;
+    }
+  }
+
   .inputs-container {
     background-color: white;
     padding: 2rem;
@@ -20,6 +35,7 @@
     .input-container {
       margin-bottom: 10px;
       text-align: start;
+
       input[type="number"] {
         padding: 10px;
         border: 1px solid #ccc;
@@ -43,7 +59,7 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    
+
     .disabled-button {
       all: unset;
       margin-top: 20px;
@@ -54,53 +70,15 @@
     }
   }
 
-  .output-container {
-    margin: 1rem;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 0.5rem;
+  .result-container {
+    background-color: #c1c1c1;
+    border-radius: 5px;
+    padding: 1rem;
+    margin: 1rem 0;
 
-    ul {
-      overflow-y: auto;
-      height: 20rem;
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-
-      &::-webkit-scrollbar {
-        width: 8px;
-      }
-
-      &::-webkit-scrollbar-track {
-        background-color: #f1f1f1;
-      }
-
-      &::-webkit-scrollbar-thumb {
-        background-color: #888;
-        border-radius: 4px;
-
-        &:hover {
-          background-color: #555;
-        }
-
-        li {
-          padding: 10px;
-          border-bottom: 1px solid #ccc;
-
-          &:last-child {
-            border-bottom: none;
-          }
-        }
-      }
-    }
-    .result-container{
-      background-color: #c1c1c1;
-      border-radius: 5px;
-      padding: 1rem;
-      .result{
-        text-align: start;
-        margin: 1rem 0;
-      }
+    .result {
+      text-align: start;
+      margin: 1rem 0;
     }
   }
 
