@@ -15,70 +15,17 @@
     p {
       color: #c1c1c1;
     }
-  }
 
-  .inputs-container {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 0.2rem;
-
-    h2 {
-      background-color: rgb(177, 177, 177);
-      padding: 1rem;
+    .switcher {
+      display: flex;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      background-color: #c1c1c1;
       width: fit-content;
-      text-align: center;
-      border-radius: 0.4rem;
-      margin: auto;
-      margin-bottom: 2rem;
-    }
-
-    .input-container {
-      margin-bottom: 10px;
-      text-align: start;
-
-      input[type="number"] {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        width: 100%;
+      label {
+        margin-left: 10px;
       }
-
-      input[type="number"]:focus {
-        outline: none;
-        border-color: #555;
-      }
-    }
-
-    .run-button {
-      all: unset;
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: rgba(170, 90, 224, 1);
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .disabled-button {
-      all: unset;
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: rgb(194, 194, 194);
-      border-radius: 5px;
-    }
-  }
-
-  .result-container {
-    background-color: #c1c1c1;
-    border-radius: 5px;
-    padding: 1rem;
-    margin: 1rem 0;
-
-    .result {
-      text-align: start;
-      margin: 1rem 0;
     }
   }
 
